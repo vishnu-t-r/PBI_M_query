@@ -1,0 +1,24 @@
+let
+    //input text
+    input = "!! My text has some @good things !&^",
+    //list of lower case letters
+    list_1 = {"a".."z"},
+    //list of upper case letters
+    list_2 = {"A".."Z"},
+    //list of numbers from 0 to 9
+    list_3 = {0..9},
+
+    //transform number to text using List.Transform and Number.ToText
+    list_4 = List.Transform(list_3, each Number.ToText(_)),
+
+    //other valid charaters
+    list_5 = {" ","&","-","_","."},
+
+    //combining all the available valid characters
+    valid_char = list_1 & list_2 & list_4 & list_5,
+
+    //select only wanted part from the input text
+    output = Text.Select(input,valid_char)
+ 
+in
+    output

@@ -1,0 +1,15 @@
+let
+
+    //creating records using [] and defining fields
+    Person1 = [FirstName = "Lewis", LastName = "Hamilton"],
+    Person2 = [FirstName = "George", LastName = "Russel"],
+    Person3 = [FirstName = "Charls", LastName = "Leclerc"],
+
+    //accessing field inside record using []
+    FirstName1 = Person1[FirstName],
+    LastName1 = Person1[LastName],
+
+    output = FirstName1 &"-"& LastName1 & " is world champion"
+in
+    //Person3
+    output

@@ -1,0 +1,19 @@
+let
+
+    RecordType = type[Firstname = text,Championship = number],
+    Table1Type = type table RecordType,
+    //customer table using #table
+    
+    CustomerTable = #table(Table1Type, {
+                                        {"lew",7},
+                                        {"geo",2},
+                                        {"nic",1}
+                                        })
+    
+    //CustomerTable = #table({"Name","Mark"}, {{"Betty", 90.3}, {"Carl", 89.5}})
+    //CustomerTable = #table(Table1Type, {{"Betty", 90.3}, {"Carl", 89.5}})
+
+                                     
+in
+    //table with records
+    CustomerTable

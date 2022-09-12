@@ -1,0 +1,14 @@
+let
+
+    //records as list {[], [], []}
+    RecordTable = Table.FromRecords({[FirstName = "Lewis",Championship = 7],
+                                     [FirstName = "Alonso",Championship = 2],
+                                     [FirstName = "Vettel",Championship = 4],
+                                     [FirstName = "Max",Championship = 1]}
+                                     ,{"FirstName","Championship"}),
+    #"Renamed Columns" = Table.RenameColumns(RecordTable,{{"FirstName", "Name"}}),
+    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"Championship", type number}})
+                                     
+in
+    //table with records
+    #"Changed Type"

@@ -1,0 +1,17 @@
+let
+    name = {"Hamilton","George","Leclerc"},
+    champion = name{0},
+    best = name{1},
+    rest_best = name{2},
+
+    output = champion &", "& best &" and "& rest_best,
+
+    test_1 = name{3},
+    test_2 = name{3}?
+
+in
+    output
+    /*
+    test_1 //will give error
+    test_2 //will not give error, output will be null
+    */
